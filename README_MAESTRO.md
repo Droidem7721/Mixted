@@ -1,4 +1,4 @@
-# 🚀 MIXTED - Repositorio Completo de Redes Neuronales y Machine Learning
+# MIXTED - Repositorio Completo de Redes Neuronales y Machine Learning
 
 ## 📊 Estructura del Repositorio
 
