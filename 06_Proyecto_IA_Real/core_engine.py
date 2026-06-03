@@ -53,10 +53,53 @@ class Connection:
         conn.id = data["id"]
         return conn
 
+from tinygrad import Tensor, nn
+from tinygrad.nn import optim
+
+class GraphCompiler:
+    def __init__(self, graph):
+        self.graph = graph
+        self.model = None
+        self.optimizer = None
+
+    def compile(self):
+        # 1. Orden topológico para determinar el flujo
+        # (Simplificado: asumimos flujo secuencial por ahora para el prototipo)
+        ordered_nodes = self._get_topological_order()
+        
+        class CompiledModel:
+            def __init__(self, nodes_data):
+                self.layers = []
+                for node in nodes_data:
+                    if node.type == "Dense":
+                        in_features = node.parameters.get("in_features", 784)
+                        out_features = node.parameters.get("units", 128)
+                        self.layers.append(nn.Linear(in_features, out_features))
+                    elif node.type == "Activation":
+                        self.layers.append(node.parameters.get("func", "relu"))
+
+            def __call__(self, x):
+                for layer in self.layers:
+                    if isinstance(layer, str):
+                        if layer == "relu": x = x.relu()
+                        elif layer == "leaky_relu": x = x.leaky_relu()
+                    else:
+                        x = layer(x)
+                return x
+
+        self.model = CompiledModel(ordered_nodes)
+        return self.model
+
+    def _get_topological_order(self):
+        # Lógica de ordenación topológica básica
+        # Por ahora, filtramos nodos que no son de entrada/salida y los ordenamos
+        return [n for n in self.graph.nodes.values() if n.type != "Input" and n.type != "Output"]
+
 class NeuralNetworkGraph:
     def __init__(self):
         self.nodes = {}
         self.connections = []
+        self.compiler = GraphCompiler(self)
 
     def add_node(self, node):
         self.nodes[node.id] = node
