@@ -50,7 +50,7 @@ Mixted/
 ### 🟢 Nivel Básico (01-04)
 Implementaciones educativas de conceptos fundamentales.
 
-**Proyectos:**
+**Prollectos:**
 - Perceptrón Simple
 - Red Neuronal Multicapa
 - Clasificador MNIST
