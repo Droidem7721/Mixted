@@ -1,50 +1,5 @@
 # MIXTED - Repositorio Completo de Redes Neuronales y Machine Learning
 
-## 📊 Estructura del Repositorio
-
-```
-Mixted/
-├── 01_Perceptron_Simple/              # Nivel: Básico
-│   ├── perceptron.py
-│   └── README.md
-├── 02_Red_Neuronal_Multicapa/         # Nivel: Básico
-│   ├── nn_multicapa.py
-│   └── README.md
-├── 03_Clasificador_MNIST/             # Nivel: Básico
-│   ├── mnist_classifier.py
-│   └── README.md
-├── 04_Autoencoder/                    # Nivel: Básico
-│   ├── autoencoder.py
-│   └── README.md
-├── 05_INTERMEDIO_README.md            # Documentación Nivel Intermedio
-├── 05_Intermedio_Red_Avanzada/        # Nivel: Intermedio
-│   ├── red_avanzada.py
-│   └── README.md
-├── 05_Intermedio_Red_Recurrente/      # Nivel: Intermedio
-│   ├── red_recurrente_gru.py
-│   └── README.md
-├── 05_Intermedio_K_Means/             # Nivel: Intermedio
-│   ├── kmeans_clustering.py
-│   └── README.md
-├── 05_Intermedio_Arbol_Decision/      # Nivel: Intermedio
-│   ├── arbol_decision_boosting.py
-│   └── README.md
-├── 06_Proyecto_IA_Real/               # Proyecto Real - Production Ready
-│   ├── red_personalizable.py
-│   ├── utilidades.py
-│   ├── ejemplos.py
-│   └── README.md
-├── 07_AVANZADO_Transformers/          # Nivel: Avanzado
-│   ├── transformers_avanzado.py
-│   └── README.md
-├── 07_AVANZADO_MetaLearning/          # Nivel: Avanzado
-│   ├── meta_learning.py
-│   └── README.md
-└── README.md                          # Este archivo
-```
-
----
-
 ## 📚 Niveles de Dificultad
 
 ### 🟢 Nivel Básico (01-04)

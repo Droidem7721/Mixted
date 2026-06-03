@@ -1,4 +1,4 @@
-# Neuronal Editor - Proyecto IA Real
+# Neuronal Editor - Proyecto IA
 
 Este proyecto es un editor gráfico nativo para la creación y entrenamiento de redes neuronales, diseñado para ser ligero, offline y multiplataforma (Windows, Linux, macOS y Android 7+).
 
